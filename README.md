@@ -1,5 +1,5 @@
 # Coding challenge
-**Your Name HERE**
+**Henrique Krupck Secchi**
 
 Seu desafio de programação está dividido em duas partes:
 - [Lógica](Logica/)
