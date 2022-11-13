@@ -1,3 +1,54 @@
-h1 {
-    color: red;
+body{
+    font-family: Calibri, 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
 }
+
+/* HEADER */
+
+.header{
+    display: flex;
+    flex-direction: column;
+}
+
+.header-titulo{
+    width: 100%;
+
+    display: inline-flex;
+    float: left;
+
+    font-size: 20px;
+}
+
+.header-titulo .header-p1{
+    margin-left: 10px;
+    color: #444;
+}
+
+.header-titulo .header-p2{
+    color: rgb(208, 21, 158);
+}
+
+.header-titulo .header-p3{
+    color: #444;
+    font-size: 20px;
+    margin-left: 5px;
+}
+
+.header-abas{
+    width: 100%;
+    text-align: center;
+    display: inline;
+    border-bottom: 5px solid rgb(167, 12, 12);
+    
+}
+
+.header-abas nav{
+    padding: 0;
+}
+
+
+/* BODY */
+
+
+
+
+/* FOOTER */

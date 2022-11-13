@@ -3,7 +3,18 @@
 {% block title %} Lista de tarefas {% endblock %}
 
 {% block content %}
-<h1>Hello World</h1>
+
+<div>
+    <ul class="list-news">
+        
+        {% for news in list_news %}
+            <li class="li-news"><a href="detailed/{{news.id}}">{{news.title}} - {{news.count}}</a></li>
+
+
+        {% endfor %}
+    </ul>
+
+</div>
 
 
 
