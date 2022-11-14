@@ -46,8 +46,16 @@ body{
 }
 
 
-/* BODY */
+/* COMMENTS */
+#last-comment{
+    background-color: rgb(230, 232, 106);
+} 
 
+
+#post-enviado{
+    background-color: rgb(237, 159, 159);
+    color: rgb(201, 14, 14);
+}
 
 
 
