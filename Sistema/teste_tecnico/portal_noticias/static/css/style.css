@@ -45,16 +45,38 @@ body{
     padding: 0;
 }
 
+/* NEWS */
+td p{
+    margin: 2px;
+}
+
+td a{
+    text-decoration: none;
+    color: rgb(170, 31, 19);
+}
 
 /* COMMENTS */
 #last-comment{
-    background-color: rgb(230, 232, 106);
+    background-color: rgb(241, 242, 170);
 } 
 
 
 #post-enviado{
-    background-color: rgb(237, 159, 159);
-    color: rgb(201, 14, 14);
+    background-color: rgb(243, 181, 181);
+    color: rgb(173, 14, 14);
+}
+
+
+.comment-name{
+    font-weight: bold;
+}
+
+.comment-date{
+    color: rgb(126, 126, 126);
+}
+
+.comment-comment{
+    font-size: 14px;
 }
 
 

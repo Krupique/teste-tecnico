@@ -5,14 +5,28 @@
 {% block content %}
 
 <div>
-    <ul class="list-news">
-        
-        {% for news in list_news %}
-            <li class="li-news"><a href="detailed/{{news.id}}">{{news.title}} - {{news.count}}</a></li>
+    <table class="table table-hover table-sm list-news">
+        <thead>
+            <tr>
+                <th scope="col"><p>Título</p></th>
+                <th scope="col"><p style="text-align: center;">Total de Comentários</p></th>
+            </tr>
+        </thead>
 
+        <tbody>
 
-        {% endfor %}
-    </ul>
+            {% for news in list_news %}
+                <tr>
+
+                    <td><a href="detailed/{{news.id}}">{{news.title}}</a></td>
+                    <td><p style="text-align: center;">{{news.count}}</p></td>
+                    
+                </tr>
+            {% endfor %}
+
+        </tbody>
+
+    </table>
 
 </div>
 

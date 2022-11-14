@@ -1,10 +1,11 @@
 {% extends 'base.html'%}
+{% load static %}
 
 {% block title %} Lista de tarefas {% endblock %}
 
 {% block content %}
 
-<div>
+<div class="container">
 
     <input id="id-noticia" style="display: none;" value="{{ news.id }}">
 
@@ -15,34 +16,65 @@
     <hr/>
 
     <form id="form-comment" onsubmit="return false">
-        {% csrf_token %}
-        <label for="name">First Name:</label>
-        <input type="text" id="name" name="name" placeholder="Your Name" required><br/>
-        
-        <label for="email">Email:</label>
-        <input type="text" id="email" name="email" placeholder="Your Email" required><br/>
-        
-        <label for="comment">Comment:</label><br/>
-        <textarea id="comment" name="comment" placeholder="Your Comment" rows="5" cols="80" required></textarea><br/>
-        
-
-        <input type="submit" value="Submit" id="btn-insert">
-        
-
+        <div class="container">
+            <div class="row">
+                {% csrf_token %}
+                <div class="col-4">
+                    <label for="name">First Name:</label>
+                    <input class="form-control" type="text" id="name" name="name" placeholder="Your Name" required><br/>
+                </div>
+                
+                <div class="col-6">
+                    <label for="email">Email:</label>
+                    <input class="form-control" type="text" id="email" name="email" placeholder="Your Email" required><br/>
+                </div>
+                
+                <div class="col-12">
+                    <label for="comment">Comment:</label><br/>
+                    <textarea class="form-control" id="comment" name="comment" placeholder="Your Comment" rows="5" cols="80" required></textarea><br/>
+                </div>
+                
+            </div>
+            
+            <button type="button" class="btn btn-secondary" value="Submit" id="btn-insert">Enviar</button>
+            
+        </div>
+            
     </form>
 
-   
+    <br/>
+    <br/>
     <hr/>
+    <br/>
 
-    <ul id="list-comments">
-        
+    <div class="container" id="list-comments">
+
         {% for comment in list_comments %}
-            <li class="li-comment">{{comment.name}} {{comment.created_at}} - {{comment.comment}}</li>
+        <div class="row">
+
+            <div class="col-1"><img src="{% static 'assets/user.png' %}" width="50px"></div>
+            <div class="col-11">
+            <div class="row">
+
+                <div class="col-3 comment-name"><p>{{comment.name}}</p></div>
+                <div class="col-4 comment-date"><span><i class="fas fa-plus"></i>{{comment.created_at}}</span></div>
+                <div class="col-12 comment-comment"><p>{{comment.comment}}</p></div>
+            </div>
+            
+            </div>
+        </div>
+        
+        <hr/>
 
         {% endfor %}
-    </ul>
 
-    <button id="btn-loadComments">Mostrar mais comentários</button>
+    </div>
+
+    <div class="row">
+        <div class="col-12 d-flex justify-content-center">
+            <button class="btn btn-secondary" id="btn-loadComments">Mostrar mais comentários</button>
+        </div>
+    </div>
 
 
 </div>
